@@ -156,8 +156,8 @@ const ctaLinks = ref<ButtonProps[]>([
     >
       <div class="space-y-6">
         <template v-for="(event, idx) in eventItems" :key="event.title">
-          <div class="flex gap-8 items-start">
-            <div class="flex-1 p-6 sm:p-8">
+          <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+            <div class="flex-1 p-6 sm:p-8 w-full">
               <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
                 {{ event.title }}
               </h3>
@@ -175,7 +175,7 @@ const ctaLinks = ref<ButtonProps[]>([
               </NuxtLink>
             </div>
             <div
-              class="flex-shrink-0 w-full sm:w-96 h-64 sm:h-80 rounded-lg overflow-hidden shadow-lg"
+              class="flex-shrink-0 w-full lg:w-96 h-64 sm:h-72 lg:h-80 rounded-lg overflow-hidden shadow-lg"
             >
               <img
                 :src="event.image"
